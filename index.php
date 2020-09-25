@@ -23,6 +23,16 @@ include("asserts/header.php");
         Choose your Bouquet from 68 € delivery included. Payments accepted: Credit Card and Paypal.
         </p>
 
+<?php
+echo(" <div class=`card`>
+<img src=`images/alexa.jpg` alt=`image`>
+<h2>Alexa</h2>
+<p>This is the test</p>
+<span class=`priceTag`>From 80.00 €</span>
+</div>")
+
+?>
+
         <div class="card">
             <img src="images/alexa.jpg" alt="image">
             <h2>Alexa</h2>
