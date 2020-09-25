@@ -24,23 +24,25 @@ include("asserts/header.php");
         </p>
 
 <?php
-echo(" <div class=`card`>
-<img src=`images/alexa.jpg` alt=`image`>
-<h2>Alexa</h2>
-<p>This is the test</p>
-<span class=`priceTag`>From 80.00 €</span>
-</div>")
+    require_once("dbConfig.php");
+
+    $sql = "SELECT * FROM item"; 
+    $result = $_conn->query($sql);
+    // print_r($result);
+    foreach ($result as $key => $value) { ?>
+        <div class="card">
+            <img src=<?php echo("images/".$value['image'])?> alt="image">
+            <h2><?php echo($value['name'])?></h2>
+            <p><?php echo($value['discription'])?></p>
+            <span class="priceTag"><?php echo("From ".$value['price']." €")?></span>
+            <br>
+        </div>
+       
+        <?php
+    };
+
 
 ?>
-
-        <div class="card">
-            <img src="images/alexa.jpg" alt="image">
-            <h2>Alexa</h2>
-            <p>This is the test</p>
-            <span class="priceTag">From 80.00 €</span>
-        </div>
-
-
     </div>
 </div>
 
