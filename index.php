@@ -30,7 +30,7 @@ include("asserts/header.php");
     $result = $_conn->query($sql);
     // print_r($result);
     foreach ($result as $key => $value) { ?>
-        <div class="card">
+        <div class="card" style=" padding: 10px; margin:5px;width:250px; height:450px; float: left">
             <img src=<?php echo("images/".$value['image'])?> alt="image">
             <h2><?php echo($value['name'])?></h2>
             <p><?php echo($value['discription'])?></p>
