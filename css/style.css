@@ -48,3 +48,9 @@ header ul li a {
     position:relative;
   
 }
+.price_option{
+    width: 350px;
+    padding: 5px;
+    margin: 5px;
+    border-style:double;
+}
